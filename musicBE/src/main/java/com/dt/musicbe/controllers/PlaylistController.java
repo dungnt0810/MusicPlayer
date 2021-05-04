@@ -2,13 +2,16 @@ package com.dt.musicbe.controllers;
 
 import com.dt.musicbe.entities.Playlist;
 import com.dt.musicbe.entities.User;
+import com.dt.musicbe.entities.UserPrincipal;
 import com.dt.musicbe.payload.PlaylistNameRequest;
 import com.dt.musicbe.services.PlaylistService;
+import com.dt.musicbe.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,10 +23,10 @@ import javax.validation.Valid;
 public class PlaylistController {
     @Autowired
     private PlaylistService playlistService;
+    private UserService userService;
 
     @GetMapping("")
     public Iterable<Playlist> getAllPlaylists(Authentication authentication) {
-
         User user = (User) authentication.getPrincipal();
         return playlistService.findAllPlaylistsByUser(user);
     }

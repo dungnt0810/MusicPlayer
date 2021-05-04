@@ -2,7 +2,9 @@ package com.dt.musicbe.entities;
 
 import com.dt.musicbe.annotation.JacksonIdSerializer;
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import java.util.*;
 import javax.persistence.*;
@@ -10,7 +12,9 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Data
+@RequiredArgsConstructor
+@Getter
+@Setter
 @Table(name = "playlist", catalog = "music_db")
 public class Playlist{
 
@@ -28,11 +32,11 @@ public class Playlist{
 	private String name;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "created_at", nullable = false, length = 10)
+	@Column(name = "created_at", nullable = false, length = 10, updatable = false)
 	private Date createdAt;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "update_at", nullable = false, length = 10)
+	@Column(name = "update_at", length = 10)
 	private Date updateAt;
 
 	@JacksonIdSerializer

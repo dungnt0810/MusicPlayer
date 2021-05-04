@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+@Data
 public class UserPrincipal implements UserDetails {
     private final User user;
 

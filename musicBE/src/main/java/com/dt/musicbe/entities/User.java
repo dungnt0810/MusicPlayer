@@ -3,6 +3,9 @@ package com.dt.musicbe.entities;
 
 import com.dt.musicbe.annotation.JacksonIdSerializer;
 import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +21,9 @@ import javax.validation.constraints.Size;
 
 
 @Entity
-@Data
+@RequiredArgsConstructor
+@Getter
+@Setter
 @Table(name = "user", catalog = "music_db")
 public class User implements Serializable {
 

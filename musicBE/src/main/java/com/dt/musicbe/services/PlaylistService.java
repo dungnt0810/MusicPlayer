@@ -24,7 +24,11 @@ public class PlaylistService {
 
     @Autowired
     private PlaylistRepository playlistRepository;
+
+    @Autowired
     private SongService songService;
+
+    @Autowired
     private UserService userService;
 
     public Playlist findPlaylistByIdAndUser(int id, User user) {

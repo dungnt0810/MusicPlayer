@@ -11,7 +11,7 @@ public final class SecurityConstants {
     public static final String ALBUM_URLS = "/api/albums/**";
     public static final String GENRE_URLS = "/api/genres/**";
     public static final String ARTIST_URLS = "/api/artists/**";
-    public static final String PLAYLIST_URLS = "/api/playlist/**";
+    public static final String PLAYLIST_URLS = "/api/playlists/**";
 
 
     public static final String TOKEN_PREFIX = "Bearer ";
