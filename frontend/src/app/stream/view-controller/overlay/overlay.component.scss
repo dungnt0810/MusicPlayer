@@ -1,0 +1,13 @@
+.container {
+  height: 100%;
+  background-color: rgba($color: rgb(8, 8, 8), $alpha: 0.7);
+  .background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0;
+    background-color: rgba($color: rgb(12, 12, 12), $alpha: 0.7);
+    filter: blur(5px);
+  }
+}

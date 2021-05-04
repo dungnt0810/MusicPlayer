@@ -1,0 +1,22 @@
+div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: pointer;
+  i {
+    padding: 0px;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all 200ms ease;
+  }
+  p {
+    margin: 20px;
+  }
+  &:hover {
+    i {
+      padding: 5px;
+      margin: 0px;
+      background-color: rgb(40, 40, 40);
+    }
+  }
+}

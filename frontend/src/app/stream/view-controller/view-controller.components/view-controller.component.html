@@ -1,0 +1,20 @@
+<div class="container" (mousedown)="updateOverlayStatus(false)">
+  <div @blurTrigger class="background" *ngIf="overlay"></div>
+  <app-view-controller-navigation-buttons
+    (mousedown)="$event.stopPropagation()"
+  ></app-view-controller-navigation-buttons>
+<!--  <app-view-controller-search-sheet-->
+<!--    class="module-controller"-->
+<!--    *ngIf="routeIncludes('/explore')"-->
+<!--  ></app-view-controller-search-sheet>-->
+  <library-navigation
+    class="module-controller"
+    *ngIf="routeIncludes('/library')"
+  ></library-navigation>
+</div>
+<view-controller-overlay
+  @fadeTrigger
+  *ngIf="overlay"
+  (mousedown)="updateOverlayStatus(false)"
+>
+</view-controller-overlay>

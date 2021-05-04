@@ -1,0 +1,70 @@
+@import '~src/scss/theme-data';
+
+:host {
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 24vw;
+  margin: 0 10px;
+  form {
+    @include flex-center(column);
+    font-family: 'roboto', sans-serif;
+    input {
+      transition: all 200ms ease-in-out;
+      border: 1px solid transparent;
+      border-radius: 25px;
+      padding: 10px 15px;
+      margin: 5px;
+      width: 100%;
+      outline: none;
+      font-size: 13px;
+      font-weight: bold;
+      box-sizing: border-box;
+      &:focus {
+        @include form-control();
+      }
+      &.error {
+        @include form-control-error();
+      }
+    }
+    .errorlist {
+      width: 100%;
+      padding: 5px 0 10px 0;
+      margin: 0;
+      color: $error-color;
+      list-style: none;
+      font-size: 13px;
+      box-sizing: border-box;
+      li {
+        margin-bottom: 2px;
+      }
+    }
+    button {
+      border: none;
+      padding: 0 15px;
+      box-sizing: content-box;
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: $primary-color;
+      outline: none;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+  }
+  auth-navigation {
+    position: absolute;
+    right: -100px;
+    top: 20%;
+  }
+  app-loading-indicator {
+    position: absolute;
+    top: calc(100%+40px);
+    width: 100%;
+  }
+}

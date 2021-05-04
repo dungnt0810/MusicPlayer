@@ -1,0 +1,23 @@
+div {
+  height: 100%;
+  margin-left: 53px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: left;
+  i {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    color: rgb(155, 155, 155);
+    font-size: 35px;
+    padding: 5px;
+    // margin: 10px;
+    border-radius: 50%;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      filter: brightness(2);
+      background-color: rgba($color: black, $alpha: 0.6);
+    }
+  }
+}

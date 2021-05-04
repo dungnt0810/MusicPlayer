@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: transparent;
+  overflow: scroll;
+  cursor: initial;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    margin: auto 0 0 0;
+    padding: 6% 0 0 0;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    .app-image {
+      width: 240px;
+    }
+    h1 {
+      padding-bottom: 20px;
+      font-size: 30px;
+    }
+  }
+}

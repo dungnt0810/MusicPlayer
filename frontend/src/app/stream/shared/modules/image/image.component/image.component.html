@@ -1,0 +1,11 @@
+<div class="image-container" [class.artist]="artist">
+  <div
+    *ngIf="url"
+    class="image"
+    [class.circle]="artist"
+    [ngStyle]="{ 'background-image': 'url(' + url + ')' }"
+  ></div>
+  <div *ngIf="!url" class="image" [class.circle]="artist">
+    <i class="material-icons">music_note</i>
+  </div>
+</div>

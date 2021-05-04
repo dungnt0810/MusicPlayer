@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="logo">
+    <i class="material-icons">music_note</i>
+    <h1>Music Player</h1>
+  </div>
+  <div class="router-outlet" [@routeAnimation]="prepareOutlet(outlet)">
+    <router-outlet #outlet="outlet" style="display: none;"></router-outlet>
+  </div>
+</div>

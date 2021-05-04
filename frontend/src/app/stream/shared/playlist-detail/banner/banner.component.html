@@ -1,0 +1,25 @@
+<div style="height: 170px;"></div>
+<!-- <div class="app-image"> -->
+<!--<app-image [url]="details.cover"></app-image>-->
+<!-- </div> -->
+<div class="details">
+  <h1 class="title">{{ details.name }}</h1>
+<!--  <p class="creater"><span>By</span> {{ details.owner }}</p>-->
+<!--  <div class="artists">-->
+<!--    <p *ngFor="let artist of details.artists; last as isLast">-->
+<!--      {{ artist.name }}-->
+<!--      <span *ngIf="!isLast">-->
+<!--        <div></div>-->
+<!--      </span>-->
+<!--    </p>-->
+<!--  </div>-->
+  <input
+    (mousedown)="mouseEvent($event)"
+    (mouseup)="mouseEvent($event)"
+    [@mousedownTrigger]="isMousedown ? 'mousedown' : '*'"
+    type="submit"
+    value="Play"
+  />
+  <p class="songs-count">{{ details.songs.length }} SONGS</p>
+</div>
+<div style="height: 100px;"></div>

@@ -1,0 +1,16 @@
+div {
+  user-select: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  i {
+    margin-left: -15px;
+    font-size: 40px;
+  }
+  h1 {
+    font-family: 'roboto', sans-serif;
+    font-size: 27px;
+  }
+}

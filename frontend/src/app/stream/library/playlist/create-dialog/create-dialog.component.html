@@ -1,0 +1,22 @@
+<div @dialogTrigger *ngIf="dialogStatus" class="container">
+  <div class="background"></div>
+  <form [formGroup]="form" (ngSubmit)="createPlaylist()" class="dialog">
+    <p>Give your playlist a name</p>
+    <input formControlName="name" name="name" autofocus type="text" />
+    <ul class="errorlist" *ngIf="name.touched && name.errors">
+      <li *ngFor="let error of name.errors | keyvalue">
+        {{ error.value }}
+      </li>
+    </ul>
+    <div class="action">
+      <input
+        type="submit"
+        class="primary"
+        [class.disabled]="form.invalid"
+        [disabled]="form.invalid"
+      />
+      <input type="submit" value="Cancel" (click)="cancel()" />
+    </div>
+  </form>
+  <app-loading-indicator *ngIf="loading"></app-loading-indicator>
+</div>

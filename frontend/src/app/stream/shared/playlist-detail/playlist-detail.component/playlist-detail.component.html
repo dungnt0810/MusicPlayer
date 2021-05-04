@@ -1,0 +1,45 @@
+<div
+  class="container"
+  [ngStyle]="{
+    background:
+      'linear-gradient(180deg, rgba(' +
+      '160, 126, 138' +
+      ', ' +
+      gradientOpacity +
+      ') 30px, #111111 60%)'
+  }"
+>
+  <div
+    class="banner scroll"
+    #banner
+    (scroll)="
+      linkedScrolling({
+        element: banner,
+        elementClass: 'banner',
+        linked: track,
+        linkedClass: 'track-list'
+      })
+    "
+  >
+    <app-playlist-detail-banner
+      [details]="playlistRes"
+    ></app-playlist-detail-banner>
+  </div>
+
+  <div
+    class="track-list scroll"
+    #track
+    (scroll)="
+      linkedScrolling({
+        element: track,
+        elementClass: 'track-list',
+        linked: banner,
+        linkedClass: 'banner'
+      })
+    "
+  >
+    <app-playlist-detail-track-list
+      [track-list]="playlistRes.songs"
+    ></app-playlist-detail-track-list>
+  </div>
+</div>

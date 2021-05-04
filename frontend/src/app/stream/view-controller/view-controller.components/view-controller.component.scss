@@ -1,0 +1,35 @@
+.container {
+  height: 80px;
+  width: calc(100% - 230px);
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: rgba($color: rgb(8, 8, 8), $alpha: 0.7);
+  app-view-controller-navigation-buttons {
+    position: absolute;
+    z-index: inherit;
+  }
+  .module-controller {
+    z-index: inherit;
+    position: relative;
+    margin: auto;
+    width: 50%;
+  }
+  .background {
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    background-color: rgba($color: rgb(10, 10, 10), $alpha: 0.7);
+  }
+}
+view-controller-overlay {
+  position: absolute;
+  height: calc(100% - 80px);
+  width: calc(100% - 230px);
+  // left: 0;
+  // width: 100%;
+  z-index: 9;
+  margin-top: 80px;
+}

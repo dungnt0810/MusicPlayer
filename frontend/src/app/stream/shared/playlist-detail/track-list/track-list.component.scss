@@ -1,0 +1,44 @@
+ol {
+  counter-reset: item;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font-size: 18px;
+  padding: 0;
+  margin-top: 90px;
+  li {
+    display: flex;
+    flex-flow: row;
+    padding: 0 10px 5px 70px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 5px 0;
+    position: relative;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background-color: rgba($color: black, $alpha: 0.3);
+      i {
+        color: #95e1d3;
+      }
+    }
+    i {
+      position: absolute;
+      font-size: 35px;
+      left: 10px;
+      top: 25%;
+      color: grey;
+      transition: all 200ms ease-in-out;
+    }
+    // &:before {
+    //   content: counter(item) '. ';
+    //   counter-increment: item;
+    //   align-self: center;
+    //   padding-right: 30px;
+    //   margin-top: -15px;
+    // }
+    app-music-tile {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-areas: 'navbar content';
+  grid-template-columns: 230px 1fr;
+  app-navbar {
+    grid-area: navbar;
+  }
+  .content {
+    grid-area: content;
+    overflow: scroll;
+    height: 100vh;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  app-media-controller {
+    position: absolute;
+    height: 90px;
+    width: 100vw;
+    bottom: 0;
+    z-index: 11;
+    background-color: transparent;
+  }
+}

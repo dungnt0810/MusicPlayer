@@ -1,0 +1,10 @@
+<div class="container">
+  <app-navbar></app-navbar>
+  <div (scroll)="updateScroll(outlet)" class="content">
+    <app-view-controller></app-view-controller>
+    <div #outlet class="router-outlet">
+      <router-outlet style="display: none;"></router-outlet>
+    </div>
+  </div>
+  <app-media-controller></app-media-controller>
+</div>

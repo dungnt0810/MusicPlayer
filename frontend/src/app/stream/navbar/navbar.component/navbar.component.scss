@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  app-navbar-logo {
+    padding: 10px 0 10px 0;
+  }
+  .items {
+    margin: auto;
+    width: 85%;
+    margin-top: 30px;
+  }
+}

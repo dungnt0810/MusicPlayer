@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="create">
+    <ul>
+      <div (click)="createPlaylist($event)">
+        <div>
+          <i class="material-icons">add</i>
+          <p>Create playlist</p>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <app-horizontal-list
+    [items]="items"
+    [cardType]="cardType"
+  ></app-horizontal-list>
+  <playlist-create-dialog *ngIf="showCreateDialog"></playlist-create-dialog>
+</div>

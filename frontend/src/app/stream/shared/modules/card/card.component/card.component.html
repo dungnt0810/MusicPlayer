@@ -1,0 +1,26 @@
+<a
+  *ngIf="inputCardType === cardType.Playlist"
+  [routerLink]="['/stream/playlist', playlist.id]"
+  class="playlist card"
+>
+<!--  <app-image [url]="playlist.cover"></app-image>-->
+  <div class="card-detail">
+    <h1>{{ playlist.name }}</h1>
+<!--    <p *ngIf="playlist.artists">-->
+<!--      <span *ngFor="let artist of playlist.artists; last as isLast"-->
+<!--        >{{ artist.name }}<span *ngIf="!isLast">,</span></span-->
+<!--      >-->
+<!--    </p>-->
+  </div>
+</a>
+
+<a
+  *ngIf="inputCardType === cardType.Artist"
+  [routerLink]="['/artist', artist.id]"
+  class="card artist"
+>
+  <app-image [artist]="true" [url]="artist.cover"></app-image>
+  <div class="artist card-detail">
+    <h1>{{ artist.name }}</h1>
+  </div>
+</a>

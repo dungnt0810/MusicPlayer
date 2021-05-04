@@ -1,0 +1,12 @@
+<div class="container">
+  <app-navbar-logo></app-navbar-logo>
+  <div class="items">
+    <app-navbar-item
+      *ngFor="let item of this.navbarItems"
+      [title]="item.title"
+      [link]="item.link"
+      [icon]="item.icon"
+      [subitems]="item.subitems"
+    ></app-navbar-item>
+  </div>
+</div>

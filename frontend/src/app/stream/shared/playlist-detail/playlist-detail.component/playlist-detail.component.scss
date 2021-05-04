@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'banner track-list';
+  grid-template-columns: 35% 1fr;
+  padding: 0 60px;
+  margin-bottom: 90px;
+  overflow: hidden;
+  .scroll {
+    overflow: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .banner {
+    grid-area: banner;
+    display: flex;
+    flex-flow: column;
+    padding: 0 60px;
+    app-playlist-detail-banner {
+      margin: auto;
+    }
+  }
+  .track-list {
+    grid-area: track-list;
+    display: initial;
+    padding: 0;
+  }
+}

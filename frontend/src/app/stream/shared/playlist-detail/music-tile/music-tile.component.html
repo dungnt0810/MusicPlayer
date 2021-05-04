@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="header">
+    <p>{{ music.title }}</p>
+    <i (mousedown)="toggleActions(true)" class="material-icons">more_vert</i>
+  </div>
+  <div class="artists">
+    <p>
+       {{ music.artist.name }}
+    </p>
+    <div class="seperator"></div>
+  </div>
+</div>
+
+<app-actions
+  class="actions"
+  *ngIf="selected"
+  @floatInTrigger
+  @floatOutTrigger
+  [actions]="actions"
+  [music]="music"
+></app-actions>

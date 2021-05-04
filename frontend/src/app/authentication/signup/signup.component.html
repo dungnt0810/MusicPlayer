@@ -1,0 +1,67 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="singup()">
+    <input
+        placeholder="Full Name"
+        [class.error]="full_name.touched && full_name.errors"
+        formControlName="full_name"
+        type="text"
+        name="full_name"
+      />
+      <ul class="errorlist" *ngIf="full_name.touched && full_name.errors">
+        <li *ngFor="let error of full_name.errors | keyvalue">
+          {{ error.value }}
+        </li>
+      </ul>
+    <input
+      placeholder="Username"
+      [class.error]="username.touched && username.errors"
+      formControlName="username"
+      type="text"
+      name="{{ username }}"
+    />
+    <ul class="errorlist" *ngIf="username.touched && username.errors">
+      <li *ngFor="let error of username.errors | keyvalue">
+        {{ error.value }}
+      </li>
+    </ul>
+    <input
+      placeholder="Password"
+      [class.error]="password.touched && password.errors"
+      formControlName="password"
+      type="text"
+      name="password"
+    />
+    <ul class="errorlist" *ngIf="password.touched && password.errors">
+      <li *ngFor="let error of password.errors | keyvalue">
+        {{ error.value }}
+      </li>
+    </ul>
+    <input
+      placeholder="Confirm Password"
+      [class.error]="confirm_password.touched && confirm_password.errors"
+      formControlName="confirm_password"
+      type="text"
+      name="confirm_password"
+    />
+    <ul
+      class="errorlist"
+      *ngIf="confirm_password.touched && confirm_password.errors"
+    >
+      <li *ngFor="let error of confirm_password.errors | keyvalue">
+        {{ error.value }}
+      </li>
+    </ul>
+    <button
+      [@clickTrigger]="mousedown ? 'mousedown' : '*'"
+      type="submit"
+      [disabled]="loading"
+      (mousedown)="mouseEvent($event)"
+      (mouseup)="mouseEvent($event)"
+      [disabled]="loading"
+    >
+      Signup
+    </button>
+  </form>
+  <auth-navigation (click)="login()"></auth-navigation>
+  <app-loading-indicator *ngIf="loading"></app-loading-indicator>
+</div>

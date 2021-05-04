@@ -1,0 +1,28 @@
+@import '~src/scss/theme-data.scss';
+
+.image-container {
+  box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.8);
+  background-color: $card-color;
+  &.artist {
+    border-radius: 50%;
+  }
+  .image {
+    &.circle {
+      border-radius: 50%;
+    }
+    i {
+      color: $secondary-text-color;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      font-size: 50px;
+    }
+    position: relative;
+    height: min-content;
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

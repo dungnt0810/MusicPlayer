@@ -1,0 +1,56 @@
+@import '~src/scss/theme-data.scss';
+
+@keyframes loading {
+  0% {
+    left: -30px;
+    // opacity: 0;
+  }
+
+  50% {
+    left: 47%;
+  }
+
+  60% {
+    left: 48%;
+  }
+
+  100% {
+    left: 100%;
+    // opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  clip-path: inset(0 0 0 0);
+  .indicator {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: transparentize($color: $primary-color, $amount: 0.1);
+    animation: loading 1.8s ease-in-out infinite;
+    position: relative;
+    left: -30px;
+    &.dot-2 {
+      animation-delay: 50ms;
+    }
+    &.dot-3 {
+      animation-delay: 100ms;
+    }
+    &.dot-4 {
+      animation-delay: 150ms;
+    }
+    &.dot-5 {
+      animation-delay: 200ms;
+    }
+    &.dot-6 {
+      animation-delay: 250ms;
+    }
+    &.dot-7 {
+      animation-delay: 300ms;
+    }
+  }
+}

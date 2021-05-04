@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;
+  user-select: none;
+  h1 {
+    font-family: 'roboto', sans-serif;
+    color: grey;
+    // font-weight: 500;
+    font-size: 25px;
+    transition: all 150ms ease;
+    padding: 0 15px 0 15px;
+  }
+  &.active h1 {
+    color: white;
+    border-radius: 25px;
+  }
+}
